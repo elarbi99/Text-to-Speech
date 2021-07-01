@@ -1,0 +1,32 @@
+﻿<Window x:Name="Speech" x:Class="Text_to_Speech.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_to_Speech"
+        mc:Ignorable="d"
+        Title="Text to Speech" Height="588.813" Width="893.232">
+    <Grid x:Name="wpfSpeech" Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="624*"/>
+            <ColumnDefinition Width="472*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtText" HorizontalAlignment="Left" Height="148" Margin="135,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="726" RenderTransformOrigin="0.49,0.476" Grid.ColumnSpan="2"/>
+        <Label Content="Type a text:" HorizontalAlignment="Left" Height="47" Margin="47,146,0,0" VerticalAlignment="Top" Width="88" FontSize="14"/>
+        <Button x:Name="btnSpeak" Content="_Speak" HorizontalAlignment="Left" Height="56" Margin="94,456,0,0" VerticalAlignment="Top" Width="194" RenderTransformOrigin="0.507,1.052" Click="btnSpeak_Click"/>
+        <Button x:Name="btnClear" Content="E_xit" HorizontalAlignment="Left" Height="56" Margin="158,456,0,0" VerticalAlignment="Top" Width="194" Click="btnClear_Click" Grid.Column="1"/>
+        <ComboBox x:Name="cboGender" Grid.Column="1" HorizontalAlignment="Left" Height="56" Margin="54,310,0,0" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.841,0.687">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+        </ComboBox>
+        <Label Content="Voice Gender:" HorizontalAlignment="Left" Height="35" Margin="421,326,0,0" VerticalAlignment="Top" Width="101" FontSize="14" RenderTransformOrigin="0.516,-0.387" Grid.ColumnSpan="2"/>
+        <Slider x:Name="trkSpeed" HorizontalAlignment="Left" Height="35" Margin="165,311,0,0" VerticalAlignment="Top" Width="130" Minimum="-10"/>
+        <Label Content="Speed:" HorizontalAlignment="Left" Height="55" Margin="69,311,0,0" VerticalAlignment="Top" Width="66" FontSize="14"/>
+        <Slider x:Name="trkVolume" HorizontalAlignment="Left" Height="35" Margin="165,370,0,0" VerticalAlignment="Top" Width="130" Maximum="100" Value="75"/>
+        <Label Content="Volume:" HorizontalAlignment="Left" Height="55" Margin="69,366,0,0" VerticalAlignment="Top" Width="66" FontSize="14"/>
+        <Label Grid.ColumnSpan="2" Content="Text to Speech Program" HorizontalAlignment="Left" Height="80" Margin="326,25,0,0" VerticalAlignment="Top" Width="292" FontWeight="Bold" FontSize="24"/>
+        <Button x:Name="btnClear1" Grid.ColumnSpan="2" Content="C_lear" HorizontalAlignment="Left" Height="56" Margin="376,456,0,0" VerticalAlignment="Top" Width="194" Click="btnClear1_Click"/>
+
+    </Grid>
+</Window>
